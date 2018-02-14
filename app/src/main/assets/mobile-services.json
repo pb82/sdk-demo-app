@@ -1,0 +1,33 @@
+{
+  "services": [
+    {
+      "config": {
+        "headers": {
+          "User-Agent": "AeroGear Android Core"
+        }
+      },
+      "name": "http"
+    },
+    {
+      "config": {
+        "uri": "http://192.168.178.20:4000/default_metrics"
+      },
+      "name": "metrics"
+    },
+    {
+      "id": "keycloak",
+      "name": "keycloak",
+      "type": "keycloak",
+      "url": "https://keycloak.security.feedhenry.org",
+      "config": {
+        "auth-server-url": "https://keycloak.security.feedhenry.org/auth",
+        "clientId": "client-app",
+        "realm": "secure-app",
+        "resource": "client-app",
+        "ssl-required": "external",
+        "url": "https://keycloak.security.feedhenry.org/auth"
+      }
+    }
+  ],
+  "namespace": "myproject"
+}
